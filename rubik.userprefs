@@ -1,13 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Menu\MenuGame\GUIGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Menu\Training.cs">
     <Files>
-      <File FileName="Assets\Script\Menu\Menu.cs" Line="30" Column="39" />
-      <File FileName="Assets\Script\Menu\Score.cs" Line="258" Column="1" />
-      <File FileName="Assets\Script\Menu\MenuGame\GUIGame.cs" Line="660" Column="35" />
-      <File FileName="Assets\Plugins\OpenIAB\Android\OpenIAB_Android.cs" Line="108" Column="1" />
-      <File FileName="Assets\Script\Game\MovingСolors.cs" Line="236" Column="21" />
-      <File FileName="Assets\Script\Game\ControllerRB.cs" Line="22" Column="39" />
+      <File FileName="Assets\Script\Menu\MenuGame\GUIGame.cs" Line="468" Column="80" />
+      <File FileName="Assets\Script\Menu\Training.cs" Line="183" Column="169" />
+      <File FileName="Assets\Script\Menu\settingsGame.cs" Line="200" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

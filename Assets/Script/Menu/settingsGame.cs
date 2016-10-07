@@ -137,11 +137,11 @@ languages.Clear();
 			languages.Add("ON");
 			languages.Add("OFF");
 			languages.Add("BACK");
-			languages.Add("GOLD");
-			languages.Add("MOVES");
-			languages.Add("ADD");
-			languages.Add("LEVEL");
-			languages.Add("TIME");
+			languages.Add("GOLD");//12
+			languages.Add("MOVES");//13
+			languages.Add("ADD");//14
+			languages.Add("LEVEL");//15
+			languages.Add("TIME");//16
 			languages.Add("EASY\nRESTART");
 			languages.Add("MENU");
 			languages.Add("BACK\nTO GAME");
@@ -196,8 +196,8 @@ languages.Clear();
 			languages.Add("Continue learning");
 			languages.Add("Start learning");
 			languages.Add("Welcome to our game!");
-			languages.Add("In order to\nunderstand the rules\nof the game,\nwe have prepared\nfor You a short training.");
-			languages.Add("The main goal of the game");
+			languages.Add("In order to\nunderstand the rules\nof the game,\nwe have prepared\nfor You a short training."); //71
+			languages.Add("The main goal of the game");//72
 			languages.Add("is collect every\ncolor\nin a vertical line");
 			languages.Add("The player has the ability\nto move the colored\ncubes along two axes:\nvertically and horizontally");
 			languages.Add("The player\nhas the ability\nto move vertically each\ncube individually");
