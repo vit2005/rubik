@@ -19,7 +19,7 @@ public class ControllerRB : MonoBehaviour
 		public     float            sizeButton        ; //размер кнопки
 		public     float            RectButton        ; //координаты начала ряда
 		public     bool             iController       ; //проверка на нажатие
-		public 		float 			verticalOffset = 80;
+		public 		float 			verticalOffset = 150;
 
 
 		private     int[]            e                 ; //проверка всех рядов 
@@ -42,6 +42,7 @@ public class ControllerRB : MonoBehaviour
 						}
 				}
 
+				verticalOffset = 150;
 				e=new int[lenght];
 				coordinates       = new int[2]                                 ;
 				size              = lenght*lenght                              ;	
