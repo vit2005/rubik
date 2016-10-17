@@ -17,14 +17,17 @@ public class ControllerRB : MonoBehaviour
 		public      Rect             ButtonTap         ; //позиция нажатой кнопки
 		public     int              size              ; //количество ячеек
 		public     float            sizeButton        ; //размер кнопки
-		public     float            RectButton        ; //координаты начала ряда
+		public     float            HorizontalOffset        ; //координаты начала ряда
 		public     bool             iController       ; //проверка на нажатие
-		public 		float 			verticalOffset = 150;
+		public 		float 			verticalOffset;
 
 
 		private     int[]            e                 ; //проверка всех рядов 
 		private     AudioSource      source            ;
 		public      int              moreCell          ; //смещение доп ячейки
+		private  float        up;
+		private  float        center;
+		private  Vector3      mmm;                //кеширование координатов центра,высоты,масштабов
 
 
 
@@ -42,15 +45,23 @@ public class ControllerRB : MonoBehaviour
 						}
 				}
 
-				verticalOffset = 150;
+
+				up          = Screen.height/ (Screen.height / 720.0f) ;
+				center      = Screen.width / (Screen.height / 720.0f) ;
+				Debug.Log (up.ToString());
+				verticalOffset = up - 545;
+				mmm.x         = Screen.height/720.0f;
+				mmm.y         = Screen.height/720.0f;
+				mmm.z         = 1;
 				e=new int[lenght];
 				coordinates       = new int[2]                                 ;
 				size              = lenght*lenght                              ;	
-				sizeButton        = (Screen.width-40)/(lenght+1)              ;
+				//sizeButton        = (Screen.width-40)/(lenght+1)              ;
+				sizeButton        = 80             ;
 				float l=0.0f;
 				l=(float)lenght;
-				RectButton        = Screen.width/2 - sizeButton*(l/2)          ;
-
+				//RectButton        = Screen.width/2 - sizeButton*(l/2)          ;
+				HorizontalOffset        = center - 387        ;
 
 
 
@@ -74,7 +85,7 @@ public class ControllerRB : MonoBehaviour
 						coordinates[1]=-1;
 						iController=true;
 				}
-				ButtonTap= new Rect(RectButton+(sizeButton*(coordinates[0]-1)),sizeButton*(coordinates[1]),sizeButton,sizeButton);
+				ButtonTap= new Rect(HorizontalOffset+(sizeButton*(coordinates[0]-1)),sizeButton*(coordinates[1]),sizeButton,sizeButton);
 
 				if (PlayerPrefs.GetString ("compani") == "true") 
 				{
@@ -134,7 +145,7 @@ public class ControllerRB : MonoBehaviour
 
 		public void OnGUI()
 		{
-
+				GUI.matrix = Matrix4x4.Scale(mmm);
 				GUIStyle style = GUI.skin.GetStyle ("button");
 
 				style.normal.background = null;
@@ -148,14 +159,14 @@ public class ControllerRB : MonoBehaviour
 
 
 
-				GUI.depth = 5;
-				GUI.DrawTexture(new Rect(RectButton,verticalOffset,sizeButton*lenght,sizeButton),gameEfect[0]);
+				//GUI.depth = 5;
+				GUI.DrawTexture(new Rect(HorizontalOffset,verticalOffset,sizeButton*lenght,sizeButton),gameEfect[0]);
 
 				for(int g=0;g<lenght;g++)
 				{
 						if(moreCell != g+1)
 						{
-								if(GUI.RepeatButton(new Rect(RectButton+(sizeButton*g),verticalOffset,sizeButton,sizeButton),gameEfect[1]))
+								if(GUI.RepeatButton(new Rect(HorizontalOffset+(sizeButton*g),verticalOffset,sizeButton,sizeButton),gameEfect[1]))
 								{
 										if(Time.timeScale > 0)
 										{
@@ -174,7 +185,7 @@ public class ControllerRB : MonoBehaviour
 
 				}
 
-				if(GUI.RepeatButton(new Rect(RectButton+((moreCell-1)*sizeButton),verticalOffset,sizeButton,sizeButton),texture[0])) //Дополнительная ячейка
+				if(GUI.RepeatButton(new Rect(HorizontalOffset+((moreCell-1)*sizeButton),verticalOffset,sizeButton,sizeButton),texture[0])) //Дополнительная ячейка
 				{
 						if(iController==true)
 						{
@@ -198,7 +209,7 @@ public class ControllerRB : MonoBehaviour
 								s++;                                                                   
 								l=0;
 						}
-						if(GUI.RepeatButton(new Rect(RectButton+(sizeButton*s),verticalOffset+sizeButton*(l+1),sizeButton,sizeButton),texture[i]))
+						if(GUI.RepeatButton(new Rect(HorizontalOffset+(sizeButton*s),verticalOffset+sizeButton*(l+1),sizeButton,sizeButton),texture[i]))
 						{
 								if(iController==true)
 								{
