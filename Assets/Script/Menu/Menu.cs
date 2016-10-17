@@ -31,6 +31,8 @@ public class Menu : MonoBehaviour
 		public int small_left_padding = 151;
 		public int small_left_padding2 = 224;
 
+		public int fs_small;
+		public int fs_big;
 
 		void Awake()
 		{
@@ -44,6 +46,8 @@ public class Menu : MonoBehaviour
 				menu=false;
 				freePlay=false;
 
+				fs_small = 22;
+				fs_big = 25;
 		}
 
 		void Update()
@@ -110,7 +114,7 @@ public class Menu : MonoBehaviour
 				style.active.textColor = color;
 
 				style.font = menuGameFont;
-				style.fontSize = 22;
+				style.fontSize = fs_small;
 
 				if (PlayerPrefs.GetInt ("PlayerLevel") > 0) 
 				{
@@ -118,7 +122,7 @@ public class Menu : MonoBehaviour
 						style.hover.background   = text [1];
 						style.active.background  = text [1];
 
-						if (GUI.Button (new Rect (center - left_padding, top_padding, button_width, button_height),settings.languages[0]))
+						if (GUI.Button (new Rect (center - left_padding, top_padding, button_width, button_height),settings.languages[0])) //"ПРОДОЛЖИТЬ\nИГРУ"
 						{
 								PlayerPrefs.SetString ("compani", "true");
 								Application.LoadLevel (PlayerPrefs.GetInt ("PlayerLevel"));				
@@ -131,7 +135,7 @@ public class Menu : MonoBehaviour
 						style.hover.background = text [0];
 						style.active.background = text [0];
 
-						GUI.Button (new Rect (center - left_padding, top_padding, button_width, button_height),settings.languages[0]);
+						GUI.Button (new Rect (center - left_padding, top_padding, button_width, button_height),settings.languages[0]); //"ПРОДОЛЖИТЬ\nИГРУ"
 				}
 
 
@@ -139,8 +143,8 @@ public class Menu : MonoBehaviour
 				style.normal.background = text [1];
 				style.hover.background = text [1];
 				style.active.background = text [1];
-				style.fontSize = 34;		
-				if (GUI.Button (new Rect (center + left_padding2, top_padding, button_width, button_height), settings.languages[1])) //
+				style.fontSize = fs_big;		
+				if (GUI.Button (new Rect (center + left_padding2, top_padding, button_width, button_height), settings.languages[1])) //"НОВАЯ\nИГРА"
 				{
 						if(PlayerPrefs.GetString ("training")!="true")
 						{
@@ -156,32 +160,32 @@ public class Menu : MonoBehaviour
 
 				}
 
-				if (GUI.Button (new Rect (center + left_padding2, top_padding3, button_width, button_height),settings.languages[6]))
+				if (GUI.Button (new Rect (center + left_padding2, top_padding3, button_width, button_height),settings.languages[6]))//"ВЫХОД"
 				{
 						Application.Quit ();			
 				}
-				style.fontSize = 22;
+				style.fontSize = fs_small;
 
-				if (GUI.Button (new Rect (center + left_padding3, top_padding, button_width, button_height),settings.languages[67])) 
+				if (GUI.Button (new Rect (center + left_padding3, top_padding, button_width, button_height),settings.languages[67])) //"ВЫБОР\nУРОВНЯ"
 				{
 						freePlay = true;
 
 				}
 
-				if (GUI.Button (new Rect (center - left_padding, top_padding2, button_width, button_height),settings.languages[3])) 
+				if (GUI.Button (new Rect (center - left_padding, top_padding2, button_width, button_height),settings.languages[3])) //"ОБУЧЕНИЕ"
 				{
 						PlayerPrefs.SetInt("trainingLevel",Application.loadedLevel);
 						Application.LoadLevel("training");				
 				}
 
-				if (GUI.Button (new Rect (center + left_padding3, top_padding2, button_width, button_height),settings.languages[5])) 
+				if (GUI.Button (new Rect (center + left_padding3, top_padding2, button_width, button_height),settings.languages[5])) //"НАСТРОЙКИ"
 				{
 						menu=true;
 				}
 
 
 
-				if (GUI.Button (new Rect (center + left_padding3, top_padding3, button_width, button_height),settings.languages[7])) 
+				if (GUI.Button (new Rect (center + left_padding3, top_padding3, button_width, button_height),settings.languages[7])) //"ОЦЕНИТЬ\nИГРУ"
 				{
 						//Application.OpenURL("market://details?id=com.Pingvin.Rubic");
 						Application.OpenURL("https://play.google.com/store/apps/details?id=com.Pingvin.Rubic");
@@ -190,14 +194,14 @@ public class Menu : MonoBehaviour
 				style.normal.background = text [2];
 				style.hover.background = text [2];
 				style.active.background = text [2];
-				style.fontSize = 34;	
+				style.fontSize = fs_big;	
 
-				if (GUI.Button (new Rect (center + left_padding2, top_padding2, button_width, button_height),settings.languages[4])) 
+				if (GUI.Button (new Rect (center + left_padding2, top_padding2, button_width, button_height),settings.languages[4])) //"РЕЙТИНГ\nИГРОКОВ"
 				{
 						score=true;			
 				}
 
-				style.fontSize = 22;
+				style.fontSize = fs_small;
 				style.normal.background = null;
 				style.hover.background = null;
 				style.active.background = null;
@@ -243,7 +247,7 @@ public class Menu : MonoBehaviour
 
 
 				style.font = menuGameFont;
-				style.fontSize = 22;
+				style.fontSize = fs_small;
 
 
 
@@ -395,7 +399,7 @@ public class Menu : MonoBehaviour
 
 
 				style.font = menuGameFont;
-				style.fontSize = 22;
+				style.fontSize = fs_small;
 
 				if (GUI.Button (new Rect (center - left_padding, top_padding, button_width, button_height), "Русский")) 
 				{

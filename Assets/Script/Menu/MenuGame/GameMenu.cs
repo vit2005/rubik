@@ -11,14 +11,17 @@ public class GameMenu : MonoBehaviour {
 		private  float        center;
 		private  float        up;
 
-		public float size = 226;
-		public float size2 = 113;
-		public float leftOffset = 226;
-		public float leftOffset2 = 113;
-		public float topOffset = 20;
-		public float topOffset2 = 246;
-		public float topOffset3 = 472;
-		public float topOffset4 = 585;
+		public float size;
+		public float size2;
+		public float leftOffset;
+		public float leftOffset2;
+		public float leftOffset3;
+		public float topOffset;
+		public float topOffset2;
+		public float topOffset3;
+		public float topOffset4;
+		public float topOffset5;
+		public float topOffset6;
 
 		void Awake()
 		{
@@ -32,6 +35,18 @@ public class GameMenu : MonoBehaviour {
 
 				settings=gameObject.GetComponent<settingsGame>();
 
+
+				size = 200;
+				size2 = 113;
+				leftOffset = 195;
+				leftOffset2 = 113;
+				leftOffset3 = 0;
+				topOffset = 20;
+				topOffset2 = 246;
+				topOffset3 = 472;
+				topOffset4 = 585;
+				topOffset5 = 226;
+				topOffset6 = 30;
 		}
 
 
@@ -55,13 +70,13 @@ public class GameMenu : MonoBehaviour {
 
 
 
-				if (GUI.Button (new Rect (center / 2 - leftOffset,up/2-226, size, size), settings.languages[1]) && acc ==false) 
+				if (GUI.Button (new Rect (center / 2 - leftOffset, up/2-topOffset5, size, size), settings.languages[1]) && acc ==false) 
 				{
 						Application.LoadLevel(1);	
 				}	
 
 
-				if (GUI.Button (new Rect (center / 2 ,up/2-226, size, size), settings.languages[3]) && acc ==false) 
+				if (GUI.Button (new Rect (center / 2 - leftOffset3, up/2-topOffset5, size, size), settings.languages[3]) && acc ==false) 
 				{
 						gameObject.GetComponent<GUIGame>().trainingExit=true;				
 
@@ -69,7 +84,7 @@ public class GameMenu : MonoBehaviour {
 
 				if (PlayerPrefs.GetInt ("sound") == 1) {
 
-						if (GUI.Button (new Rect (center/ 2 - leftOffset, up/2, size, size), settings.languages[8] + "\n" + settings.languages[9]) && acc ==false) 
+						if (GUI.Button (new Rect (center/ 2 - leftOffset, up/2 - topOffset6, size, size), settings.languages[8] + "\n" + settings.languages[9]) && acc ==false) 
 						{
 								PlayerPrefs.SetInt ("sound", 0);
 						}
@@ -77,7 +92,7 @@ public class GameMenu : MonoBehaviour {
 				}
 				else 
 				{
-						if (GUI.Button (new Rect (center / 2 - leftOffset,up/2, size, size), settings.languages[8] + "\n" + settings.languages[10]) && acc ==false) 
+						if (GUI.Button (new Rect (center / 2 - leftOffset, up/2 - topOffset6, size, size), settings.languages[8] + "\n" + settings.languages[10]) && acc ==false) 
 						{
 								PlayerPrefs.SetInt ("sound", 1);
 						}
@@ -85,7 +100,7 @@ public class GameMenu : MonoBehaviour {
 				}
 
 
-				if (GUI.Button (new Rect (center / 2 ,up/2, size, size), settings.languages[21]) && acc ==false) 
+				if (GUI.Button (new Rect (center / 2 - leftOffset3, up/2 - topOffset6, size, size), settings.languages[21]) && acc ==false) 
 				{
 						gameObject.GetComponent<GUIGame>().menuExit=true;	
 				}
@@ -117,7 +132,7 @@ public class GameMenu : MonoBehaviour {
 						gameObject.GetComponent<GUIGame>().menu=false;				
 				}
 
-				if (GUI.Button (new Rect (center / 2 , topOffset, size, size), settings.languages[3]) && acc ==false) 
+				if (GUI.Button (new Rect (center / 2 - leftOffset3, topOffset, size, size), settings.languages[3]) && acc ==false) 
 				{
 						PlayerPrefs.SetInt("trainingLevel",Application.loadedLevel);
 						Application.LoadLevel("training");	
@@ -172,11 +187,11 @@ public class GameMenu : MonoBehaviour {
 				{ // контакт
 						Application.OpenURL("https://vk.com/pinguinmobile");
 				}
-				if (GUI.Button (new Rect (center / 2 - leftOffset, 585, size2, size2), text [8]) && acc ==false) 
+				if (GUI.Button (new Rect (center / 2 - leftOffset, topOffset4, size2, size2), text [8]) && acc ==false) 
 				{ // ?
 						Application.OpenURL("http://pinguin-studio.com.ua/");
 				}
-				if (GUI.Button (new Rect (center / 2 - leftOffset2, 585, size2, size2), text [7]) && acc ==false) 
+				if (GUI.Button (new Rect (center / 2 - leftOffset2, topOffset4, size2, size2), text [7]) && acc ==false) 
 				{ // гугл +
 						Application.OpenURL("https://plus.google.com/116358092492971276645/about");
 				}
