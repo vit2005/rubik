@@ -33,7 +33,7 @@ public class settingsGame: MonoBehaviour {
 				{
 						languages.Add("ПРОДОЛ-\nЖИТЬ\nИГРУ");//0
 						languages.Add("НОВАЯ\nИГРА");
-						languages.Add("ТРЕНИРОВКА");
+						languages.Add("ТРЕНИ-\nРОВКА");
 						languages.Add("ОБУЧЕНИЕ");
 						languages.Add("РЕЙТИНГ\nИГРОКОВ");
 						languages.Add("НАСТРОЙКИ");
@@ -64,7 +64,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("Войти");//30
 						languages.Add("Быстрая регистрация");
 						languages.Add("Войти без регистрации");
-						languages.Add("Повторите ввод пароля");
+						languages.Add("Повторите пароль");
 						languages.Add("Зарегистрироваться");
 						languages.Add("Назад");
 						languages.Add("Поздравляем!");
@@ -99,7 +99,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("ПОДТВЕРДИТЬ");
 						languages.Add("ОТМЕНА");
 						languages.Add("ВЫБОР\nУРОВНЯ");
-						languages.Add("Продолжить\nобучение");
+						languages.Add("Дальше");
 						languages.Add("Начать\nобучение");//69
 						languages.Add("Добро пожаловать в нашу игру!");//70
 						languages.Add("Для того, чтобы\nразобраться с\nправилами игры,\nмы подготовили\nдля Вас короткое обучение.");
@@ -112,7 +112,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("Ходом считается\nперемещение цветного кубика\nиз верхней резервной\nячейки вниз на игровое поле.");
 						languages.Add("На прохождение уровня\nвыделяется 10 ходов и\nнеограниченное количество времени.\nНо чем меньше времени и ходов\nВы потратите - тем выше будет\nВаша позиция в рейтинге.");
 						languages.Add("Ваше обучение окончено.\nВы в любой момент можете повторить его из главного\nменю игры.");//80
-						languages.Add("Закончить\nобучение");
+						languages.Add("Закончить");
 						languages.Add("ДА");
 						languages.Add("НЕТ");
 						languages.Add("Для участия в общем рейтинге зарегистрируйтесь");
@@ -193,7 +193,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("CONFIRM");
 						languages.Add("CANCEL");
 						languages.Add("SELECT\nLEVEL");
-						languages.Add("Continue\nlearning");
+						languages.Add("Continue");
 						languages.Add("Start\nlearning");//69
 						languages.Add("Welcome to our game!");//70
 						languages.Add("In order to\nunderstand the rules\nof the game,\nwe have prepared\nfor You a short training."); //71
@@ -206,7 +206,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("The movement of colored\ncube from the top reserve cell\ndown (on the playing field)\nis called 'MOVE'.");
 						languages.Add("You have 10 moves and\nunlimited time on any level.\nBut you have a higher rank\nin rating, when you\nspend less time and moves.");
 						languages.Add("Your learning is over.\nYou can always repeat it\nfrom the main menu of the game.");//80
-						languages.Add("Finish\nthe game\nlearning");
+						languages.Add("Finish");
 						languages.Add("YES");
 						languages.Add("NO");
 						languages.Add("To register to participate in the leaderboard");
@@ -221,7 +221,7 @@ public class settingsGame: MonoBehaviour {
 				{
 						languages.Add("ПРОДОВ-\nЖИТИ\nГРУ");//0
 						languages.Add("НОВА\nГРА");
-						languages.Add("ТРЕНУВАННЯ");
+						languages.Add("ТРЕНУ-\nВАННЯ");
 						languages.Add("НАВЧАННЯ");
 						languages.Add("РЕЙТИНГ\nГРАВЦІВ");
 						languages.Add("НАЛАШТУ-\nВАННЯ");
@@ -238,7 +238,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("ЧАС");
 						languages.Add("ЛЕГКИЙ\nРЕСТАРТ");
 						languages.Add("МЕНЮ");
-						languages.Add("ВЕРНУТИСЯ\nДО ГРИ");
+						languages.Add("ПОВЕРНУТИСЯ\nДО ГРИ");
 						languages.Add("КУПИТИ\nЗОЛОТО");//20
 						languages.Add("ВИХІД ДО\nМЕНЮ");
 						languages.Add("На даний час у Вас:");
@@ -252,7 +252,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("Увійти");//30
 						languages.Add("Швидка реєстрація");
 						languages.Add("Увійти без реєстрації");
-						languages.Add("Повторіть введення паролю");
+						languages.Add("Повторіть пароль");
 						languages.Add("Зареєструватися");
 						languages.Add("Назад");
 						languages.Add("Вітаємо!");
@@ -287,7 +287,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("ПІДТВЕРДИТИ");
 						languages.Add("СКАСУВАТИ");
 						languages.Add("ВИБІР\nРІВНЯ");
-						languages.Add("Продовжити\nнавчання");
+						languages.Add("Далі");
 						languages.Add("Почати\nнавчання");//69
 						languages.Add("Ласкаво просимо в нашу гру!");//70
 						languages.Add("Для того, щоб\nрозібратися з\nправилами гри,\nми підготували\nдля Вас коротке навчання.");
@@ -300,7 +300,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("Ходом вважається\nпереміщення кольорового кубика\nз верхньої резервної\nклітинки вниз на ігрове поле.");
 						languages.Add("На проходження рівня\nвиділяється 10 ходів і\nнеобмежена кількість часу.\nАле чим менше часу і ходів\nВи витратите, тим вище буде\nВаша позиція в рейтингу.");
 						languages.Add("Ваше навчання закінчено.\nВи в будь-який момент можете \nповторити його з головного меню гри.");//80
-						languages.Add("Закінчити\nнавчання");
+						languages.Add("Закінчити");
 						languages.Add("ТАК");
 						languages.Add("НІ");
 						languages.Add("Для участі у загальному рейтингу зареєструйтеся");

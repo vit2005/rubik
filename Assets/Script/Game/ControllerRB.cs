@@ -57,11 +57,11 @@ public class ControllerRB : MonoBehaviour
 				coordinates       = new int[2]                                 ;
 				size              = lenght*lenght                              ;	
 				//sizeButton        = (Screen.width-40)/(lenght+1)              ;
-				sizeButton        = 80             ;
+				//sizeButton        = 80             ;
 				float l=0.0f;
 				l=(float)lenght;
 				//RectButton        = Screen.width/2 - sizeButton*(l/2)          ;
-				HorizontalOffset        = center - 387        ;
+				//HorizontalOffset        = center - 387        ;
 
 
 

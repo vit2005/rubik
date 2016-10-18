@@ -36,6 +36,10 @@ public class LogIn : MonoBehaviour
 		public   string       pass;
 		public   string       pass2;
 
+		public int font_size_big;
+		public int font_size_medium;
+		public int font_size_small;
+
 		public List<float> log1;
 		public List<float> log2;
 		public List<float> log3;
@@ -65,7 +69,8 @@ public class LogIn : MonoBehaviour
 
 		void Awake()
 		{
-
+				addressLogIn = "https://mobileapi.rozumgames.com/auth/login";
+				addressRegistr = "https://mobileapi.rozumgames.com/auth/reg";  
 				//mainInputField.shouldHideMobileInput = false; 
 
 				if(Application.loadedLevelName == "log_In")
@@ -93,8 +98,12 @@ public class LogIn : MonoBehaviour
 
 				regist   = false;
 
-				float width = 444;
-				float left = 222;
+				float width = 400;
+				float left = 202;
+
+				font_size_big = 28;
+				font_size_medium = 24;
+				font_size_small = 18;
 
 				log1 = new List<float> {left, 0, width, 98};
 				log2 = new List<float> {left, 840, width, 70};
@@ -105,7 +114,7 @@ public class LogIn : MonoBehaviour
 				log7 = new List<float> {left, 235, width, 45};
 				log8 = new List<float> {left, 300, width, 58};
 				log9 = new List<float> {left, 378, width, 58};
-				log10 = new List<float> {left, 156, width, 58};
+				log10 = new List<float> {left, 193, width, 58};
 
 				reg1 = new List<float> {left, 158, width, 58};
 				reg2 = new List<float> {left, 300, width, 58};
@@ -118,8 +127,8 @@ public class LogIn : MonoBehaviour
 				reg9 = new List<float> {left, 300, width, 58};
 				reg10 = new List<float> {left, 379, width, 45};
 				reg11 = new List<float> {left, 448, width, 58};
-				reg12 = new List<float> {left, 156, 220, 58};
-				reg13 = new List<float> {2, 156, 220, 58};
+				reg12 = new List<float> {left, 193, 283, 58};
+				reg13 = new List<float> {94, 193, 96, 58};
 
 		}
 
@@ -150,7 +159,7 @@ public class LogIn : MonoBehaviour
 						style3.hover.textColor  = color;
 						style3.active.textColor = color;
 
-						style3.fontSize = 24;
+						style3.fontSize = font_size_small;
 
 						if(GUI.Button(new Rect(center-272.5f,up-78,545,58),settings.languages[32]))
 						{	
@@ -186,7 +195,7 @@ public class LogIn : MonoBehaviour
 
 				style.normal.textColor = Color.white;
 				style.alignment        = TextAnchor.MiddleCenter;
-				style.fontSize = 24;
+				style.fontSize = font_size_small;
 				style.font = fontLog [0];
 
 				if(info == settings.languages [27])
@@ -209,7 +218,7 @@ public class LogIn : MonoBehaviour
 
 
 
-				style.fontSize = 36;
+				style.fontSize = font_size_big;
 				style.font = fontLog [1];
 				style.normal.background = null;
 
@@ -219,7 +228,7 @@ public class LogIn : MonoBehaviour
 				style2.hover .background = texture [6];
 				style2.active.background = texture [6];
 
-				style2.fontSize = 30;
+				style2.fontSize = font_size_medium;
 				style2.font = fontLog [1];
 
 				style2.alignment        = TextAnchor.MiddleCenter;
@@ -235,7 +244,7 @@ public class LogIn : MonoBehaviour
 				style3.hover .background = texture [2];
 				style3.active.background = texture [2];
 				style3.font = fontLog [0];
-				style3.fontSize = 30;
+				style3.fontSize = font_size_medium;
 
 				if(GUI.Button(new Rect(center - log9[0], log9[1], log9[2], log9[3]),settings.languages[30]))
 				{
@@ -298,13 +307,13 @@ public class LogIn : MonoBehaviour
 				}
 
 
-				style.fontSize = 24;
+				style.fontSize = font_size_small;
 				style.font = fontLog [0];	
 
 
 				GUI.Label (new Rect (center - reg5[0], reg5[1], reg5[2], reg5[3]),info);
 
-				style.fontSize = 36;
+				style.fontSize = font_size_big;
 				style.normal.background = null;
 				style.font = fontLog [1];	
 
@@ -315,7 +324,7 @@ public class LogIn : MonoBehaviour
 				style2.hover .background = texture [6];
 				style2.active.background = texture [6];
 
-				style2.fontSize = 30;
+				style2.fontSize = font_size_medium;
 				style2.font = fontLog [1];
 
 				style2.alignment        = TextAnchor.MiddleCenter;
@@ -339,7 +348,7 @@ public class LogIn : MonoBehaviour
 				style3.hover.textColor  = color;
 				style3.active.textColor = color;
 				style3.font = fontLog [0];
-				style3.fontSize = 30;
+				style3.fontSize = font_size_medium;
 
 				if (GUI.Button (new Rect (center - reg12[0], up - reg12[1], reg12[2], reg12[3]), settings.languages [34])) 
 				{
