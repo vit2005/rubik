@@ -85,7 +85,7 @@ public class ControllerRB : MonoBehaviour
 						coordinates[1]=-1;
 						iController=true;
 				}
-				ButtonTap= new Rect(HorizontalOffset+(sizeButton*(coordinates[0]-1)),sizeButton*(coordinates[1]),sizeButton,sizeButton);
+				ButtonTap= new Rect(center/2 - HorizontalOffset+(sizeButton*(coordinates[0]-1)),sizeButton*(coordinates[1]),sizeButton,sizeButton);
 
 				if (PlayerPrefs.GetString ("compani") == "true") 
 				{
@@ -160,13 +160,13 @@ public class ControllerRB : MonoBehaviour
 
 
 				//GUI.depth = 5;
-				GUI.DrawTexture(new Rect(HorizontalOffset,verticalOffset,sizeButton*lenght,sizeButton),gameEfect[0]);
+				GUI.DrawTexture(new Rect(center/2 - HorizontalOffset,verticalOffset,sizeButton*lenght,sizeButton),gameEfect[0]);
 
 				for(int g=0;g<lenght;g++)
 				{
 						if(moreCell != g+1)
 						{
-								if(GUI.RepeatButton(new Rect(HorizontalOffset+(sizeButton*g),verticalOffset,sizeButton,sizeButton),gameEfect[1]))
+								if(GUI.RepeatButton(new Rect(center/2 - HorizontalOffset+(sizeButton*g),verticalOffset,sizeButton,sizeButton),gameEfect[1]))
 								{
 										if(Time.timeScale > 0)
 										{
@@ -185,7 +185,7 @@ public class ControllerRB : MonoBehaviour
 
 				}
 
-				if(GUI.RepeatButton(new Rect(HorizontalOffset+((moreCell-1)*sizeButton),verticalOffset,sizeButton,sizeButton),texture[0])) //Дополнительная ячейка
+				if(GUI.RepeatButton(new Rect(center/2 - HorizontalOffset+((moreCell-1)*sizeButton),verticalOffset,sizeButton,sizeButton),texture[0])) //Дополнительная ячейка
 				{
 						if(iController==true)
 						{
@@ -209,7 +209,7 @@ public class ControllerRB : MonoBehaviour
 								s++;                                                                   
 								l=0;
 						}
-						if(GUI.RepeatButton(new Rect(HorizontalOffset+(sizeButton*s),verticalOffset+sizeButton*(l+1),sizeButton,sizeButton),texture[i]))
+						if(GUI.RepeatButton(new Rect(center/2 - HorizontalOffset+(sizeButton*s),verticalOffset+sizeButton*(l+1),sizeButton,sizeButton),texture[i]))
 						{
 								if(iController==true)
 								{
