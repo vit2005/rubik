@@ -36,7 +36,21 @@ public class Score : MonoBehaviour
 		private  Color         colorGrey  ;
 		private  Color         colorYellow;
 
+		public List<float> level_btns;
 
+		public List<float> number_txt;
+		public List<float> name_txt;
+		public List<float> moves_txt;
+		public List<float> time_txt;
+
+		public List<float> number_val;
+		public List<float> name_val;
+		public List<float> moves_val;
+		public List<float> time_val;
+
+		public List<float> line1;
+		public List<float> line2;
+		public List<float> line3;
 
 		void Awake () 
 
@@ -59,7 +73,23 @@ public class Score : MonoBehaviour
 				scale.y  = Screen.height/720.0f;
 				scale.z  = 1;
 
+				level_btns = new List<float>(){190, 100, 30, 80, 30};
+				number_txt = new List<float>(){170, 50, 60, 70};
+				name_txt = new List<float>(){-10, 50, 410, 70};
+				moves_txt = new List<float>(){-183, 50, 150, 70};
+				time_txt = new List<float>(){-122, 50, 150, 70};
+
+				number_val = new List<float>(){-11, 90, 50, 410, 70};
+				name_val = new List<float>(){200, 90, 50, 80, 70};
+				moves_val = new List<float>(){-185, 90, 50, 150, 70};
+				time_val = new List<float>(){-121, 90, 50, 150, 70};
+
+				line1 = new List<float>(){143, 100, 2, 450};
+				line2 = new List<float>(){-73, 100, 2, 450};
+				line3 = new List<float>(){-20, 100, 2, 450};
+
 		}
+
 
 		void Start()
 		{
@@ -134,7 +164,7 @@ public class Score : MonoBehaviour
 								style.hover.background  = text [1];
 								style.active.background = text [1];
 						}
-						if (GUI.Button (new Rect (center*2 - 160, 20+(70 * e), 140, 50), Name [e])) //Выводим кнопку выбора одного из уровней
+						if (GUI.Button (new Rect (center - level_btns[0]+(level_btns[1] * e), level_btns[2], level_btns[3], level_btns[4]), Name [e])) //Выводим кнопку выбора одного из уровней
 						{
 								level = e;//Меняем на выбранный уровень
 
@@ -152,7 +182,7 @@ public class Score : MonoBehaviour
 				style.active.textColor = colorGrey;
 				style.fontSize = 24;
 
-				if (GUI.Button (new Rect (center * 2 - 160, up - 160, 140, 140), settings.languages [21])) //Кнопка выхода из рекордов
+				if (GUI.Button (new Rect (center * 2 - 196, up - 115, 170, 90), settings.languages [21])) //Кнопка выхода из рекордов
 				{
 						menuScript.score = false;
 				}
@@ -160,19 +190,19 @@ public class Score : MonoBehaviour
 
 				style2.normal.background = null;
 				style2.normal.textColor = color;
-				style2.fontSize = 36;
+				style2.fontSize = 18;
 				style2.font=fontScore[1];
 
 				style2.alignment   = TextAnchor.MiddleLeft;
-				GUI.Label(new Rect(center-425,20, 60,70),"№");// Позиция игрока
-				GUI.Label(new Rect(center-345,20,410,70),settings.languages [55]);//Имя 
+				GUI.Label(new Rect(center-number_txt[0], number_txt[1], number_txt[2],number_txt[3]),"№");// Позиция игрока
+				GUI.Label(new Rect(center-name_txt[0],name_txt[1],name_txt[2],name_txt[3]),settings.languages [55]);//Имя 
 
 				style2.alignment   = TextAnchor.MiddleCenter;
-				GUI.Label(new Rect(center+5 ,20,150,70),settings.languages [13]);//Ходы
-				GUI.Label(new Rect(center+155,20,150,70),settings.languages [16]);//Время
+				GUI.Label(new Rect(center+moves_txt[0] ,moves_txt[1],moves_txt[2],moves_txt[3]),settings.languages [13]);//Ходы
+				GUI.Label(new Rect(center+time_txt[0],time_txt[1],time_txt[2],time_txt[3]),settings.languages [16]);//Время
 
 
-				style2.fontSize = 30;
+				style2.fontSize = 18;
 				style2.font=fontScore[0];
 
 				if(score.Length >= 4)//Проверка получили ли данные с базы 
@@ -192,12 +222,12 @@ public class Score : MonoBehaviour
 								style2.alignment   = TextAnchor.MiddleLeft;
 
 
-								GUI.Label(new Rect(center-345,90+(50*i),410,70),namePl[i]);//Имя 
+								GUI.Label(new Rect(center-number_val[0], number_val[1]+(number_val[2]*i), number_val[3], number_val[4]),namePl[i]);//Имя 
 
 								style2.alignment   = TextAnchor.MiddleCenter;
-								GUI.Label(new Rect(center-445,90+(50*i), 80,70),(i+1)+"");// Позиция игрока
-								GUI.Label(new Rect(center+5 ,90+(50*i),150,70),move[i]);//Ходы	
-								GUI.Label(new Rect(center+155,90+(50*i),150,70),time[i]);//Время
+								GUI.Label(new Rect(center-name_val[0], name_val[1]+(name_val[2]*i), name_val[3], name_val[4]),(i+1)+"");// Позиция игрока
+								GUI.Label(new Rect(center+moves_val[0], moves_val[1]+(moves_val[2]*i),moves_val[3], moves_val[4]),move[i]);//Ходы	
+								GUI.Label(new Rect(center+time_val[0], time_val[1]+(time_val[2]*i),time_val[3], time_val[4]),time[i]);//Время
 						}
 
 
@@ -205,26 +235,26 @@ public class Score : MonoBehaviour
 						style2.normal.textColor = colorYellow;
 						style2.alignment   = TextAnchor.MiddleLeft;
 
-						GUI.Label(new Rect(center-445,up-(70),750,50),"");
+						//GUI.Label(new Rect(center-445,up-(70),750,50),"");
 
 						style2.normal.background = null;
 
 
 						if(player.Count==4)
 						{
-								GUI.Label(new Rect(center-345,up-(70),410,50),player[1]);//Имя 	
+								GUI.Label(new Rect(center-number_val[0],up-(number_val[1]),number_val[2],number_val[3]),player[1]);//Имя 	
 								style2.alignment = TextAnchor.MiddleCenter;
-								GUI.Label(new Rect(center-445,up-(70),80, 50),player[0]);// Позиция игрока
-								GUI.Label(new Rect(center+5 ,up-(70),150,50),player[2]);//Ходы	
-								GUI.Label(new Rect(center+155,up-(70),150,50),player[3]);//Время
+								GUI.Label(new Rect(center-name_val[0],up-(name_val[1]),name_val[2], name_val[3]),player[0]);// Позиция игрока
+								GUI.Label(new Rect(center+name_val[0] ,up-(name_val[1]),name_val[2],name_val[3]),player[2]);//Ходы	
+								GUI.Label(new Rect(center+name_val[0],up-(name_val[1]),name_val[2],name_val[3]),player[3]);//Время
 						}
 
 				}
 
 				style2.normal.background = text[2];		
-				GUI.Label(new Rect(center-365,20,2,600), ""); //Разделительные полосы
-				GUI.Label(new Rect(center+5, 20,2,600), "");
-				GUI.Label(new Rect(center+155,20,2,600), "");
+				GUI.Label(new Rect(center-line1[0], line1[1], line1[2], line1[3]), ""); //Разделительные полосы
+				GUI.Label(new Rect(center+line2[0], line2[1], line2[2], line2[3]), "");
+				GUI.Label(new Rect(center+line3[0], line3[1], line3[2], line3[3]), "");
 				style2.normal.background = null;
 		}
 
