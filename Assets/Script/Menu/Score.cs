@@ -240,14 +240,14 @@ public class Score : MonoBehaviour
 						style2.normal.background = null;
 
 
-						if(player.Count==4)
-						{
-								GUI.Label(new Rect(center-number_val[0],up-(number_val[1]),number_val[2],number_val[3]),player[1]);//Имя 	
-								style2.alignment = TextAnchor.MiddleCenter;
-								GUI.Label(new Rect(center-name_val[0],up-(name_val[1]),name_val[2], name_val[3]),player[0]);// Позиция игрока
-								GUI.Label(new Rect(center+name_val[0] ,up-(name_val[1]),name_val[2],name_val[3]),player[2]);//Ходы	
-								GUI.Label(new Rect(center+name_val[0],up-(name_val[1]),name_val[2],name_val[3]),player[3]);//Время
-						}
+//						if(player.Count==4)
+//						{
+//								GUI.Label(new Rect(center-number_val[0],up-(number_val[1]),number_val[2],number_val[3]),player[1]);//Имя 	
+//								style2.alignment = TextAnchor.MiddleCenter;
+//								GUI.Label(new Rect(center-name_val[0],up-(name_val[1]),name_val[2], name_val[3]),player[0]);// Позиция игрока
+//								GUI.Label(new Rect(center+name_val[0] ,up-(name_val[1]),name_val[2],name_val[3]),player[2]);//Ходы	
+//								GUI.Label(new Rect(center+name_val[0],up-(name_val[1]),name_val[2],name_val[3]),player[3]);//Время
+//						}
 
 				}
 

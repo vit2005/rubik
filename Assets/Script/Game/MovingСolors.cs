@@ -55,7 +55,7 @@ public class MovingСolors : MonoBehaviour {
 				//Перемещение влево
 				Rect leftRect = parentControl.ButtonTap;
 				leftRect.x   -= parentControl.ButtonTap.width;
-
+				//Debug.Log (string.Format("leftRect:[{0},{1}] mouse:[{2},{3}]",leftRect.x, leftRect.y, mausPos.x, mausPos.y));
 				if(leftRect.Contains(mausPos))
 				{
 
@@ -177,21 +177,19 @@ public class MovingСolors : MonoBehaviour {
 
 				if(UpRect.Contains(mausPos))
 				{
-						for(int i=m;i >= 0; i--)
-						{
-								if(vert[i].name == "kubik_top")
-								{
-										if (PlayerPrefs.GetInt ("sound") != 1) 
-										{
-												source.PlayOneShot(gameSound,1);
-										}
+						if (vert.Count > 0) {
+								for (int i = m; i >= 0; i--) {
+										if (vert [i].name == "kubik_top") {
+												if (PlayerPrefs.GetInt ("sound") != 1) {
+														source.PlayOneShot (gameSound, 1);
+												}
 
-										vert.RemoveAt(i);
-										vert.Insert(m,parentControl.colors[0]);
-										parentControl.coordinates[1]--;
+												vert.RemoveAt (i);
+												vert.Insert (m, parentControl.colors [0]);
+												parentControl.coordinates [1]--;
+										}
 								}
 						}
-
 
 				}
 				// Вниз
@@ -202,24 +200,21 @@ public class MovingСolors : MonoBehaviour {
 				if(DownRect.Contains(mausPos))
 				{
 
+						if (vert.Count > 0) {
+								for (int e = m; e < vert.Count; e++) {
+										if (vert [e].name == "kubik_top") {
+												if (PlayerPrefs.GetInt ("sound") != 1) {
+														source.PlayOneShot (gameSound, 1);
+												}
 
-						for(int e=m; e < vert.Count ;e++)
-						{
-								if(vert[e].name == "kubik_top")
-								{
-										if (PlayerPrefs.GetInt ("sound") != 1) 
-										{
-												source.PlayOneShot(gameSound,1);
+												vert.Insert (m, parentControl.colors [0]);
+												vert.RemoveAt (e + 1);
+												if (parentControl.coordinates [1] == 0) {
+														gameObject.GetComponent<GUIGame> ().Move ();
+												}
+												parentControl.coordinates [1]++;	
+
 										}
-
-										vert.Insert(m,parentControl.colors[0]);
-										vert.RemoveAt(e+1);
-										if(parentControl.coordinates[1]==0)
-										{
-												gameObject.GetComponent<GUIGame>().Move();
-										}
-										parentControl.coordinates[1]++;	
-
 								}
 						}
 				}

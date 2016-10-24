@@ -49,7 +49,7 @@ public class ControllerRB : MonoBehaviour
 				up          = Screen.height/ (Screen.height / 720.0f) ;
 				center      = Screen.width / (Screen.height / 720.0f) ;
 				Debug.Log (up.ToString());
-				verticalOffset = up - 545;
+				verticalOffset =up/6+sizeButton/2;
 				mmm.x         = Screen.height/720.0f;
 				mmm.y         = Screen.height/720.0f;
 				mmm.z         = 1;
@@ -78,14 +78,14 @@ public class ControllerRB : MonoBehaviour
 				moreCell=Mathf.Clamp(moreCell,1,lenght);
 
 
-
-				if(Input.touchCount == 0)
+				//Debug.Log ("Input.touchCount="+Input.touchCount.ToString());
+				if(!Input.GetMouseButton(0))
 				{
 						coordinates[0]=-1;
 						coordinates[1]=-1;
 						iController=true;
 				}
-				ButtonTap= new Rect(center/2 - HorizontalOffset+(sizeButton*(coordinates[0]-1)),sizeButton*(coordinates[1]),sizeButton,sizeButton);
+				ButtonTap= new Rect(center/2 - HorizontalOffset+(sizeButton*(coordinates[0]-1)),verticalOffset+sizeButton*(coordinates[1]),sizeButton,sizeButton);
 
 				if (PlayerPrefs.GetString ("compani") == "true") 
 				{
@@ -145,7 +145,7 @@ public class ControllerRB : MonoBehaviour
 
 		public void OnGUI()
 		{
-				GUI.matrix = Matrix4x4.Scale(mmm);
+				//GUI.matrix = Matrix4x4.Scale(mmm);
 				GUIStyle style = GUI.skin.GetStyle ("button");
 
 				style.normal.background = null;
