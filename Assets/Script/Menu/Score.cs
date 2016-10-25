@@ -77,16 +77,16 @@ public class Score : MonoBehaviour
 				number_txt = new List<float>(){170, 50, 60, 70};
 				name_txt = new List<float>(){-10, 50, 410, 70};
 				moves_txt = new List<float>(){-183, 50, 150, 70};
-				time_txt = new List<float>(){-122, 50, 150, 70};
+				time_txt = new List<float>(){-112, 50, 150, 70};
 
 				number_val = new List<float>(){-11, 90, 50, 410, 70};
 				name_val = new List<float>(){200, 90, 50, 80, 70};
 				moves_val = new List<float>(){-185, 90, 50, 150, 70};
-				time_val = new List<float>(){-121, 90, 50, 150, 70};
+				time_val = new List<float>(){-110, 90, 50, 150, 70};
 
 				line1 = new List<float>(){143, 100, 2, 450};
 				line2 = new List<float>(){-73, 100, 2, 450};
-				line3 = new List<float>(){-20, 100, 2, 450};
+				line3 = new List<float>(){0, 100, 2, 450};
 
 		}
 

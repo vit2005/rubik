@@ -16,6 +16,7 @@ public class MovingСolors : MonoBehaviour {
 		private      AudioSource      source            ;
 
 		private      string           saveGame          ;
+//		private  Vector3      mmm;  
 
 		void Awake () 
 		{
@@ -23,6 +24,10 @@ public class MovingСolors : MonoBehaviour {
 
 				parentControl =gameObject.GetComponent<ControllerRB>();
 				lenght        =parentControl.lenght;
+
+//				mmm.x         = Screen.height/720.0f;
+//				mmm.y         = Screen.height/720.0f;
+//				mmm.z         = 1;
 		}
 
 
@@ -42,7 +47,10 @@ public class MovingСolors : MonoBehaviour {
 				}
 		}
 
-
+//		public void OnGUI()
+//		{
+//				GUI.matrix = Matrix4x4.Scale (mmm);
+//		}
 
 
 

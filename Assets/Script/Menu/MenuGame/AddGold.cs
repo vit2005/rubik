@@ -24,9 +24,7 @@ public class AddGold : MonoBehaviour
 
 		public float topOffset;
 
-
 		private void Awake()
-
 		{
 				goldPrise  = 1;
 				center     = Screen.width / (Screen.height / 720.0f) ;

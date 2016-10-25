@@ -36,15 +36,15 @@ public class GameMenu : MonoBehaviour {
 				settings=gameObject.GetComponent<settingsGame>();
 
 
-				size = 200;
-				size2 = 113;
-				leftOffset = 195;
-				leftOffset2 = 113;
+				size = 188;
+				size2 = 91;
+				leftOffset = 185;
+				leftOffset2 = 92;
 				leftOffset3 = 0;
-				topOffset = 20;
-				topOffset2 = 246;
-				topOffset3 = 472;
-				topOffset4 = 585;
+				topOffset = 22;
+				topOffset2 = 212;
+				topOffset3 = 404;
+				topOffset4 = 498;
 				topOffset5 = 226;
 				topOffset6 = 30;
 		}

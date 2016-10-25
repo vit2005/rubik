@@ -58,6 +58,8 @@ public class GUIGame : MonoBehaviour
 
 		public	 string 	  urlStat;
 
+		public int fontsize24 = 20;
+
 		public List<float> gold1 = new List<float> {20,20,140,30};
 		public List<float> gold2 = new List<float> {20,50,140,60};
 		public List<float> gold3 = new List<float> {20,110,140,40};
@@ -154,16 +156,16 @@ public class GUIGame : MonoBehaviour
 				ico3 = new List<float> {0,0,100,100};
 
 				pa1 = new List<float> {232,100,465,195};
-				pa2 = new List<float> {216,60,433,80};
-				pa3 = new List<float> {232,100,465,195};
-				pa4 = new List<float> {202,62,120,120};
-				pa5 = new List<float> {67,60,460,50};
-				pa6 = new List<float> {67,8,160,50};
-				pa7 = new List<float> {11,12,194,70};
-				pa8 = new List<float> {186,65,185,74};
-				pa9 = new List<float> {3,65,185,74};
-				pa10 = new List<float> {215,65,430,165};
-				pa11 = new List<float> {201,60,400,150};
+				pa2 = new List<float> {196,60,395,80};
+				pa3 = new List<float> {209,100,418,195};
+				pa4 = new List<float> {180,62,120,120};
+				pa5 = new List<float> {44,60,460,50};
+				pa6 = new List<float> {43,8,160,50};
+				pa7 = new List<float> {26,12,155,70};
+				pa8 = new List<float> {182,90,185,74};
+				pa9 = new List<float> {7,90,178,74};
+				pa10 = new List<float> {204,95,408,224};
+				pa11 = new List<float> {201,65,400,160};
 
 				paeg1 = new List<float> {186,65,185,74};
 				paeg2 = new List<float> {3,65,185,74};
@@ -302,7 +304,9 @@ public class GUIGame : MonoBehaviour
 
 				if (PlayerPrefs.GetString ("compani") == "true") 
 				{
-						CompaniMenu ();
+						if (menu == false && addG == false && addM == false && win == false && EasyRestart == false && move > 0) {
+								CompaniMenu ();
+						}
 						if(menu==true && registr == false)
 						{
 								gameMenu.MenuOn (text, fontMenu, acc);
@@ -476,7 +480,7 @@ public class GUIGame : MonoBehaviour
 						}
 				}
 
-				style.fontSize = 24;		
+				style.fontSize = fontsize24;		
 
 				//GUI.Label (new Rect(20,up/2-60,140,40),settings.languages[15]); //Level
 				GUI.Label (new Rect(center/2-time1[0],time1[1],time1[2],time1[3]),settings.languages[16]); //time
@@ -500,7 +504,7 @@ public class GUIGame : MonoBehaviour
 				style2.active.textColor = color;
 
 				style2.font = fontMenu [0];
-				style2.fontSize = 24;
+				style2.fontSize = fontsize24;
 
 				if (menu == false && addM == false && addG == false && EasyRestart == false)
 				{
@@ -565,14 +569,14 @@ public class GUIGame : MonoBehaviour
 
 						GUI.Label(new Rect(center/2-pa5[0],up/2-pa5[1],pa5[2],pa5[3]),PlayerPrefs.GetString("login"));
 
-						style.fontSize=24;
+						style.fontSize=fontsize24;
 
 						style.normal.textColor = colorGold;
 						style.hover .textColor = colorGold;
 						style.active.textColor = colorGold;
 
 						GUI.Label(new Rect(center/2-pa6[0],up/2-pa6[1],pa6[2],pa6[3]),"G: "+gold);
-						style2.fontSize=24;
+						style2.fontSize=fontsize24;
 						style2.normal.textColor = Color.white;
 						style2.hover .textColor = Color.white;
 						style2.active.textColor = Color.white;
@@ -596,7 +600,7 @@ public class GUIGame : MonoBehaviour
 						style2.normal .background  = text [19];
 						style2.hover.background    = text [19];
 
-						style2.fontSize=24;
+						style2.fontSize=fontsize24;
 
 						if(GUI.Button(new Rect(center/2-pa8[0],up/2+pa8[1],pa8[2],pa8[3]), settings.languages [65]))//Подтверждение
 						{
@@ -616,7 +620,7 @@ public class GUIGame : MonoBehaviour
 						style.alignment = TextAnchor.MiddleCenter;
 						style.normal.background = null;
 						style.font=fontMenu[0];
-						style.fontSize=24;
+						style.fontSize=fontsize24;
 
 						style.normal.textColor = Color.white;
 						style.hover .textColor = Color.white;
@@ -646,7 +650,7 @@ public class GUIGame : MonoBehaviour
 				style2.normal .background  = text [19];
 				style2.hover.background    = text [19];
 
-				style2.fontSize=24;
+				style2.fontSize=fontsize24;
 
 				if(GUI.Button(new Rect(center/2-paeg1[0],up/2+paeg1[1],paeg1[2],paeg1[3]), settings.languages [65]))//Подтверждение
 				{
@@ -687,7 +691,7 @@ public class GUIGame : MonoBehaviour
 				style.alignment = TextAnchor.MiddleCenter;
 				style.normal.background = null;
 				style.font=fontMenu[0];
-				style.fontSize=24;
+				style.fontSize=fontsize24;
 
 				style.normal.textColor = Color.white;
 				style.hover .textColor = Color.white;
