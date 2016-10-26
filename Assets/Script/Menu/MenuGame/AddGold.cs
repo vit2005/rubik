@@ -24,6 +24,8 @@ public class AddGold : MonoBehaviour
 
 		public float topOffset;
 
+		public int fontsize_small = 28;
+
 		private void Awake()
 		{
 				goldPrise  = 1;
@@ -114,7 +116,7 @@ public class AddGold : MonoBehaviour
 
 				style.normal.textColor = Color.white;
 				style.alignment        = TextAnchor.MiddleCenter;
-				style.fontSize         = 36;
+				style.fontSize         = fontsize_small;
 				style.font             = fontMenu [0];
 
 				style.normal.background = null;
@@ -128,7 +130,7 @@ public class AddGold : MonoBehaviour
 
 
 				style.normal.textColor = Color.white;
-				style.fontSize = 36;
+				style.fontSize = fontsize_small;
 				GUI.Label (new Rect(center/2-300,180,600,50),settings.languages [23]);
 
 				style.normal.background = text [12];
@@ -166,7 +168,7 @@ public class AddGold : MonoBehaviour
 				style.hover .background = null;
 				style.active.background = null;
 
-				style.fontSize = 36;
+				style.fontSize = fontsize_small;
 
 				//GUI.Label (new Rect(center/2-300,468,600,50),settings.languages [25]+goldPrise+" $");
 

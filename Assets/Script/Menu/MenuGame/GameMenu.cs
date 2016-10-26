@@ -127,7 +127,7 @@ public class GameMenu : MonoBehaviour {
 
 
 
-				if (GUI.Button (new Rect (center / 2 - leftOffset, topOffset, size, size),settings.languages[19]) && acc ==false) 
+				if (GUI.Button (new Rect (center / 2 - leftOffset, topOffset, size, size),settings.languages[11]) && acc ==false) 
 				{
 						gameObject.GetComponent<GUIGame>().menu=false;				
 				}

@@ -108,7 +108,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("Игрок имеет возможность\nпередвигать цветные\nкубики по двум осям:\nпо вертикали и горизонтали");
 						languages.Add("У игрока есть\nвозможность перемещать\nпо вертикали каждый\nкубик по отдельности");
 						languages.Add("Но по горизонтали\nдвигается вся\nстрока целиком");
-						languages.Add("Вверху игрового поля\nесть перемещаемая резервная ячейка,\nв которую можно временно переместить\nлюбой из цветных кубиков,\nнаходящихся на верхней горизонтали.");
+						languages.Add("Вверху игрового поля есть перемещаемая резервная ячейка, в которую можно временно переместить любой из цветных кубиков, находящихся на верхней горизонтали.");
 						languages.Add("Ходом считается\nперемещение цветного кубика\nиз верхней резервной\nячейки вниз на игровое поле.");
 						languages.Add("На прохождение уровня выделяется 10 ходов и неограниченное количество времени. Но чем меньше времени и ходов Вы потратите - тем выше будет Ваша позиция в рейтинге.");
 						languages.Add("Ваше обучение окончено.\nВы в любой момент можете повторить его из главного\nменю игры.");//80
@@ -202,7 +202,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("The player has the ability\nto move the colored\ncubes along two axes:\nvertically and horizontally");
 						languages.Add("The player\nhas the ability\nto move vertically each\ncube individually");
 						languages.Add("But the horizontal\nstring is moving\nentirely");
-						languages.Add("At the top of the game board\nyou can see movable reserve cell.\nYou can temporarily move  to this cell\nany of the colored blocks,\nwhich located in the upper horizontally.");
+						languages.Add("At the top of the game board you can see movable reserve cell. You can temporarily move  to this cell any of the colored blocks, which located in the upper horizontally.");
 						languages.Add("The movement of colored\ncube from the top reserve cell\ndown (on the playing field)\nis called 'MOVE'.");
 						languages.Add("You have 10 moves and\nunlimited time on any level.\nBut you have a higher rank\nin rating, when you\nspend less time and moves.");
 						languages.Add("Your learning is over.\nYou can always repeat it\nfrom the main menu of the game.");//80
@@ -230,7 +230,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("ЗВУК:");
 						languages.Add("УВІМКНУТИ");
 						languages.Add("ВИМКНУТИ");//10
-						languages.Add("НАЗАД");
+						languages.Add("НАЗАД");//11
 						languages.Add("ЗОЛОТО");
 						languages.Add("ХОДІВ");
 						languages.Add("ДОДАТИ");
@@ -238,7 +238,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("ЧАС");
 						languages.Add("ЛЕГКИЙ\nРЕСТАРТ");
 						languages.Add("МЕНЮ");
-						languages.Add("ПОВЕРНУТИСЯ\nДО ГРИ");
+						languages.Add("ПОВЕРНУТИСЯ\nДО ГРИ");//19
 						languages.Add("КУПИТИ\nЗОЛОТО");//20
 						languages.Add("ВИХІД ДО\nМЕНЮ");
 						languages.Add("На даний час у Вас:");
@@ -296,7 +296,7 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("Гравець має можливість\nпересувати кольорові\nкубики по двох осях:\nпо вертикалі і горизонталі");
 						languages.Add("У гравця є\nможливість переміщати\nпо вертикалі кожен\nкубик окремо");
 						languages.Add("Але по горизонталі\nрухається весь\nрядок цілком");
-						languages.Add("Вгорі ігрового поля\nє пересувна резервна клітинка,\nв яку можна тимчасово перемістити\nбудь-який з кольорових кубиків,\nщо знаходяться на верхній горизонталі.");
+						languages.Add("Вгорі ігрового поля є пересувна резервна клітинка, в яку можна тимчасово перемістити будь-який з кольорових кубиків, що знаходяться на верхній горизонталі.");
 						languages.Add("Ходом вважається\nпереміщення кольорового кубика\nз верхньої резервної\nклітинки вниз на ігрове поле.");
 						languages.Add("На проходження рівня\nвиділяється 10 ходів і\nнеобмежена кількість часу.\nАле чим менше часу і ходів\nВи витратите, тим вище буде\nВаша позиція в рейтингу.");
 						languages.Add("Ваше навчання закінчено.\nВи в будь-який момент можете \nповторити його з головного меню гри.");//80

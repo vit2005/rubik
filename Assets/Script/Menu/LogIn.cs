@@ -98,8 +98,8 @@ public class LogIn : MonoBehaviour
 
 				regist   = false;
 
-				float width = 400;
-				float left = 202;
+				float width = 396;
+				float left = 198;
 
 				font_size_big = 28;
 				font_size_medium = 24;

@@ -15,6 +15,8 @@ public class AddMoves : MonoBehaviour
 		private  float        up;
 		private  int          moveBay;
 
+		public int fontsize_small = 28;
+
 		public List<float> gui1;
 		public List<float> gui2;
 		public List<float> gui3;
@@ -27,6 +29,8 @@ public class AddMoves : MonoBehaviour
 		public List<float> gui10;
 		public List<float> gui11;
 
+
+
 		void Awake()
 		{
 
@@ -34,6 +38,8 @@ public class AddMoves : MonoBehaviour
 				up        = Screen.height/ (Screen.height / 720.0f) ;
 
 				settings  = gameObject.GetComponent<settingsGame>();
+
+				addressRec = "https://mobileapi.rozumgames.com/shop/buy";
 
 				gui1 = new List<float> (){ 300, 11, 600, 50};
 				gui2 = new List<float> (){ 300, 46, 600, 110};
@@ -68,7 +74,7 @@ public class AddMoves : MonoBehaviour
 
 				style.normal.textColor = Color.white;
 				style.alignment        = TextAnchor.MiddleCenter;
-				style.fontSize         = 36;
+				style.fontSize         = fontsize_small;
 				style.font             = fontMenu [0];
 
 				style.normal.background = null;
@@ -82,7 +88,7 @@ public class AddMoves : MonoBehaviour
 
 
 				style.normal.textColor = Color.white;
-				style.fontSize = 36;
+				style.fontSize = fontsize_small;
 				GUI.Label (new Rect(center/2-gui3[0],gui3[1],gui3[2],gui3[3]),settings.languages [23]);
 
 				style.normal.background = text [12];
@@ -128,7 +134,7 @@ public class AddMoves : MonoBehaviour
 				style.hover .background = null;
 				style.active.background = null;
 
-				style.fontSize = 36;
+				style.fontSize = fontsize_small;
 
 				GUI.Label (new Rect(center/2-gui7[0],gui7[1],gui7[2],gui7[3]),settings.languages [48]+" "+moveBay+" "+settings.languages[23]);
 
@@ -145,7 +151,7 @@ public class AddMoves : MonoBehaviour
 
 
 				style2.font = fontMenu [0];
-				style2.fontSize = 36;
+				style2.fontSize = fontsize_small;
 
 				if (moveBay != 0) 
 				{

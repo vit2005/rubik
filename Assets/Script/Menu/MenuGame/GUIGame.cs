@@ -102,6 +102,7 @@ public class GUIGame : MonoBehaviour
 				moveCode    = Base64.Encode("30");	
 				moveGame    = Base64.Encode("0");
 
+				urlStat = "https://mobileapi.rozumgames.com/statistic/gold";
 
 				color.r     = 68.0f/255.0f;
 				color.g     = 66.0f/255.0f;
