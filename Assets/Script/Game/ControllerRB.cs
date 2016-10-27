@@ -100,6 +100,9 @@ public class ControllerRB : MonoBehaviour
 
 		public void Wins()
 		{
+				if (guiG.win)
+						return;
+
 				for(int i=0;i<lenght;i++)
 				{
 						int j=0;

@@ -173,7 +173,7 @@ public class GUIGame : MonoBehaviour
 				paeg3 = new List<float> {215,65,430,165};
 				paeg4 = new List<float> {201,60,400,150};
 
-
+				//win = true;
 		}
 
 		public void Start()
@@ -280,6 +280,30 @@ public class GUIGame : MonoBehaviour
 
 				style2.font = fontMenu [0];
 				style2.fontSize = 20;
+
+				if (Input.GetKeyDown(KeyCode.Alpha1) ) 
+				{
+						win = true;
+						//int mg = System.Convert.ToInt32(Base64.Decode(moveGame));
+						s = 99;
+						menu = false;
+						addG = false;
+						addM = false;
+						EasyRestart = false;
+
+						wd.Wictory(999,99,99, true);
+				}
+
+				if (Input.GetKeyDown(KeyCode.Alpha2) ) 
+				{
+						move = 0;
+						menu = false;
+						addG = false;
+						addM = false;
+						EasyRestart = false;
+						wd.Defeat();
+				}
+
 
 				if (menu==false && addG == false && addM == false && win == false && EasyRestart == false && move > 0 ) 
 				{
