@@ -5,6 +5,7 @@ using JsonSerialize_DESerialize;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Generate;
+using GoogleMobileAds.Api;
 
 
 [RequireComponent(typeof(settingsGame))]
@@ -140,14 +141,14 @@ public class GUIGame : MonoBehaviour
 				j.y         = Screen.height/720.0f;
 				j.z         = 1;
 
-				gold1 = new List<float> {20,20,140,30};
-				gold2 = new List<float> {20,50,140,60};
-				gold3 = new List<float> {20,110,140,40};
-				moves1 = new List<float> {160,20,140,30};
-				moves2 = new List<float> {160,50,140,60};
-				moves3 = new List<float> {160,110,140,40};
-				time1 = new List<float> {73,20,140,30};
-				time2 = new List<float> {70,320,140,80};
+				gold1 = new List<float> {20,70,140,30};
+				gold2 = new List<float> {20,100,140,60};
+				gold3 = new List<float> {20,160,140,40};
+				moves1 = new List<float> {160,70,140,30};
+				moves2 = new List<float> {160,100,140,60};
+				moves3 = new List<float> {160,160,140,40};
+				time1 = new List<float> {73,70,140,30};
+				time2 = new List<float> {70,270,140,80};
 
 				restart = new List<float> {30,115,170,90};
 				menu_btn = new List<float> {196,115,170,90};
@@ -174,6 +175,8 @@ public class GUIGame : MonoBehaviour
 				paeg4 = new List<float> {201,60,400,150};
 
 				//win = true;
+
+				RequestBanner ();
 		}
 
 		public void Start()
@@ -759,6 +762,27 @@ public class GUIGame : MonoBehaviour
 
 		}
 
+		//================================== bunner
+
+		private void RequestBanner()
+		{
+				#if UNITY_EDITOR
+				string adUnitId = "unused";
+				#elif UNITY_ANDROID
+				string adUnitId = "ca-app-pub-4456758937740163/3682617935";
+				#elif UNITY_IPHONE
+				string adUnitId = "INSERT_IOS_BANNER_AD_UNIT_ID_HERE";
+				#else
+				string adUnitId = "unexpected_platform";
+				#endif
+
+				// Create a 320x50 banner at the top of the screen.
+				BannerView bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
+				// Create an empty ad request.
+				AdRequest request = new AdRequest.Builder().Build();
+				// Load the banner with the request.
+				bannerView.LoadAd(request);
+		}
 
 }
 
