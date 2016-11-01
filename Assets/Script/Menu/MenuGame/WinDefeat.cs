@@ -75,7 +75,7 @@ public class WinDefeat : MonoBehaviour
 				victory6 = new List<float> (){ 260, 354, 520, 4 };
 				victory7 = new List<float> (){ 225, 358, 260, 50 };
 				victory8 = new List<float> (){ 42, 358, 260, 50 };
-				victory9 = new List<float> (){ 260, 398, 260, 80 };
+				victory9 = new List<float> (){ 225, 398, 260, 80 };
 				victory10 = new List<float> (){ 225, 398, 260, 80 };
 				victory11 = new List<float> (){ 42, 398, 260, 80 };
 				victory12 = new List<float> (){ 226, 170, 452, 70 };

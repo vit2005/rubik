@@ -109,9 +109,9 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("У игрока есть\nвозможность перемещать\nпо вертикали каждый\nкубик по отдельности");
 						languages.Add("Но по горизонтали\nдвигается вся\nстрока целиком");
 						languages.Add("Вверху игрового поля есть перемещаемая резервная ячейка, в которую можно временно переместить любой из цветных кубиков, находящихся на верхней горизонтали.");
-						languages.Add("Ходом считается\nперемещение цветного кубика\nиз верхней резервной\nячейки вниз на игровое поле.");
+						languages.Add("Ходом считается перемещение цветного кубика из верхней резервной ячейки вниз на игровое поле.");
 						languages.Add("На прохождение уровня выделяется 10 ходов и неограниченное количество времени. Но чем меньше времени и ходов Вы потратите - тем выше будет Ваша позиция в рейтинге.");
-						languages.Add("Ваше обучение окончено.\nВы в любой момент можете повторить его из главного\nменю игры.");//80
+						languages.Add("Ваше обучение окончено. Вы в любой момент можете повторить его из главного меню игры.");//80
 						languages.Add("Закончить");
 						languages.Add("ДА");
 						languages.Add("НЕТ");
@@ -199,13 +199,13 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("In order to\nunderstand the rules\nof the game,\nwe have prepared\nfor You a short training."); //71
 						languages.Add("The main goal of the game");//72
 						languages.Add("is collect every\ncolor\nin a vertical line");
-						languages.Add("The player has the ability\nto move the colored\ncubes along two axes:\nvertically and horizontally");
+						languages.Add("The player has the ability to move the colored cubes along two axes: vertically and horizontally");
 						languages.Add("The player\nhas the ability\nto move vertically each\ncube individually");
 						languages.Add("But the horizontal\nstring is moving\nentirely");
 						languages.Add("At the top of the game board you can see movable reserve cell. You can temporarily move  to this cell any of the colored blocks, which located in the upper horizontally.");
-						languages.Add("The movement of colored\ncube from the top reserve cell\ndown (on the playing field)\nis called 'MOVE'.");
-						languages.Add("You have 10 moves and\nunlimited time on any level.\nBut you have a higher rank\nin rating, when you\nspend less time and moves.");
-						languages.Add("Your learning is over.\nYou can always repeat it\nfrom the main menu of the game.");//80
+						languages.Add("The movement of colored cube from the top reserve cell down (on the playing field) is called 'MOVE'.");
+						languages.Add("You have 10 moves and unlimited time on any level. But you have a higher rank in rating, when you spend less time and moves.");
+						languages.Add("Your learning is over. You can always repeat it from the main menu of the game.");//80
 						languages.Add("Finish");
 						languages.Add("YES");
 						languages.Add("NO");
@@ -297,9 +297,9 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("У гравця є\nможливість переміщати\nпо вертикалі кожен\nкубик окремо");
 						languages.Add("Але по горизонталі\nрухається весь\nрядок цілком");
 						languages.Add("Вгорі ігрового поля є пересувна резервна клітинка, в яку можна тимчасово перемістити будь-який з кольорових кубиків, що знаходяться на верхній горизонталі.");
-						languages.Add("Ходом вважається\nпереміщення кольорового кубика\nз верхньої резервної\nклітинки вниз на ігрове поле.");
-						languages.Add("На проходження рівня\nвиділяється 10 ходів і\nнеобмежена кількість часу.\nАле чим менше часу і ходів\nВи витратите, тим вище буде\nВаша позиція в рейтингу.");
-						languages.Add("Ваше навчання закінчено.\nВи в будь-який момент можете \nповторити його з головного меню гри.");//80
+						languages.Add("Ходом вважається переміщення кольорового кубика з верхньої резервної клітинки вниз на ігрове поле.");
+						languages.Add("На проходження рівня виділяється 10 ходів і необмежена кількість часу. Але чим менше часу і ходів Ви витратите, тим вище буде Ваша позиція в рейтингу.");
+						languages.Add("Ваше навчання закінчено. Ви в будь-який момент можете повторити його з головного меню гри.");//80
 						languages.Add("Закінчити");
 						languages.Add("ТАК");
 						languages.Add("НІ");

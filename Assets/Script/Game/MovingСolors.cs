@@ -41,7 +41,7 @@ public class MovingСolors : MonoBehaviour {
 				{
 						RotateGorizont ();
 
-						if (cD [0] != 0 && cD [0] != lenght + 1) {
+						if (cD [0] != -1 && cD [0] != lenght + 1) {
 								RotateVert ();
 						}
 				}
@@ -152,17 +152,17 @@ public class MovingСolors : MonoBehaviour {
 				if(parentControl.coordinates[0]==parentControl.moreCell)
 				{
 						vert.Add(parentControl.texture[0]);
-
-						for(int v=line[1];v <= line[2];v++)
-						{
-								vert.Add(parentControl.texture[v]);
+						if (cD [0] != 0) {
+								for (int v = line [1]; v <= line [2]; v++) {
+										vert.Add (parentControl.texture [v]);
+								}
 						}
 				}
 				else
 				{
 						for(int g=line[1];g <= line[2];g++)
 						{
-								if (parentControl.texture.Count < g)
+								//if (parentControl.texture.Count < g)
 									vert.Add(parentControl.texture[g]);
 						}
 				}
