@@ -95,6 +95,7 @@ public class Training : MonoBehaviour {
 				style2.fontStyle    = FontStyle.Normal;
 				style.alignment     = TextAnchor.MiddleCenter;
 				style2.alignment     = TextAnchor.MiddleCenter;
+
 				//style2.alignment    = TextAnchor.UpperCenter;
 
 				style2.font         = font;

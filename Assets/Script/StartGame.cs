@@ -13,6 +13,7 @@ public class StartGame : MonoBehaviour
 		public List<float> Russian;
 		public List<float> Ukrainian;
 
+		static bool loaded = false;
 
 		void Awake () 
 		{
@@ -21,18 +22,26 @@ public class StartGame : MonoBehaviour
 				i.x      = Screen.height / 720.0f;
 				i.y      = Screen.height / 720.0f;
 				i.z      = 1;
+				loaded = false;
+		}
 
+		public void Init(){
 				if(PlayerPrefs.GetString ("languages")!="")
 				{
 						Application.LoadLevel("log_In");
+						return;
 				}
 				English = new List<float>(){ 96, 308, 192, 192 };
 				Russian = new List<float>(){ 96, 96, 192, 192 };
 				Ukrainian = new List<float>(){ -96, -116, 192, 192 };
+				loaded = true;
 		}
 
 		void OnGUI()
 		{
+				if (!loaded)
+						return;
+				
 				GUI.matrix             = Matrix4x4.Scale(i);
 				GUIStyle style         = GUI.skin.GetStyle ("button");
 

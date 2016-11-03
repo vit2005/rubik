@@ -72,6 +72,9 @@ public class GameMenu : MonoBehaviour {
 
 				if (GUI.Button (new Rect (center / 2 - leftOffset, up/2-topOffset5, size, size), settings.languages[1]) && acc ==false) 
 				{
+						if (GUIGame.banner!=null)
+								GUIGame.banner.Hide();
+						Debug.Log ("Hide");
 						Application.LoadLevel(1);	
 				}	
 
@@ -135,6 +138,9 @@ public class GameMenu : MonoBehaviour {
 				if (GUI.Button (new Rect (center / 2 - leftOffset3, topOffset, size, size), settings.languages[3]) && acc ==false) 
 				{
 						PlayerPrefs.SetInt("trainingLevel",Application.loadedLevel);
+						if (GUIGame.banner!=null)
+								GUIGame.banner.Hide();
+						Debug.Log ("Hide");
 						Application.LoadLevel("training");	
 				}	
 
@@ -159,6 +165,9 @@ public class GameMenu : MonoBehaviour {
 
 				if (GUI.Button (new Rect (center / 2 , topOffset2, size, size), settings.languages[21]) && acc ==false) 
 				{
+						if (GUIGame.banner!=null)
+								GUIGame.banner.Hide();
+						Debug.Log ("Hide");
 						Application.LoadLevel("menu");	
 				}
 

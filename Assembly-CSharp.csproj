@@ -114,6 +114,7 @@
      <Compile Include="Assets\Script\Menu\settingsGame.cs" />
      <Compile Include="Assets\Script\RateThisGame.cs" />
      <Compile Include="Assets\Script\StartGame.cs" />
+     <Compile Include="Assets\Script\fade_off_ani.cs" />
      <None Include="Assets\JSON\readme.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />

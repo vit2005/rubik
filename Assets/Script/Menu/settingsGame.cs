@@ -31,33 +31,33 @@ public class settingsGame: MonoBehaviour {
 
 				if (PlayerPrefs.GetString ("languages") == "Russian")
 				{
-						languages.Add("ПРОДОЛ-\nЖИТЬ\nИГРУ");//0
-						languages.Add("НОВАЯ\nИГРА");
-						languages.Add("ТРЕНИ-\nРОВКА");
-						languages.Add("ОБУЧЕНИЕ");
-						languages.Add("РЕЙТИНГ\nИГРОКОВ");
-						languages.Add("НАСТРОЙКИ");
-						languages.Add("ВЫХОД");
-						languages.Add("ОЦЕНИТЬ\nИГРУ");
-						languages.Add("ЗВУК:");
-						languages.Add("ВКЛЮЧИТЬ");
-						languages.Add("ВЫКЛЮ-\nЧИТЬ");//10
-						languages.Add("НАЗАД");
+						languages.Add("Продол-\nжить\nигру");//0
+						languages.Add("Новая\nигра");
+						languages.Add("Трени-\nровка");
+						languages.Add("Обучение");
+						languages.Add("Рейтинг\nигроков");
+						languages.Add("Настройки");
+						languages.Add("Выход");
+						languages.Add("Оценить\nигру");
+						languages.Add("Звук:");
+						languages.Add("Включить");
+						languages.Add("Выклю-\nчить");//10
+						languages.Add("Назад");
 						languages.Add("ЗОЛОТО");
 						languages.Add("ХОДОВ");
 						languages.Add("ДОБАВИТЬ");
 						languages.Add("УРОВЕНЬ");
 						languages.Add("ВРЕМЯ");
-						languages.Add("ЛЕГКИЙ\nРЕСТАРТ");
-						languages.Add("МЕНЮ");
-						languages.Add("ВЕРНУТЬСЯ В\nИГРУ");
-						languages.Add("КУПИТЬ\nЗОЛОТО");//20
-						languages.Add("ВЫХОД В\nМЕНЮ");
+						languages.Add("Легкий\nрестарт");
+						languages.Add("Меню");
+						languages.Add("Вернуться в\nигру");
+						languages.Add("Купить\nзолото");//20
+						languages.Add("Выход в\nменю");
 						languages.Add("На данный момент у Вас:");
 						languages.Add("золота");
-						languages.Add("ДОБАВИТЬ ЕЩЕ:");
+						languages.Add("Добавить еще:");
 						languages.Add("золота за");
-						languages.Add("ПЕРЕЙТИ К ОПЛАТЕ");
+						languages.Add("Перейти к оплате");
 						languages.Add("Некоторые функции игры требуют аккаунта на нашем сервисе\nи постоянного доступа в интернет");
 						languages.Add("Введите свой логин:");
 						languages.Add("Введите свой пароль:");
@@ -78,17 +78,17 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("Выберите один из вариантов");
 						languages.Add("Добавить ходов");
 						languages.Add("Легкий рестарт");
-						languages.Add("ГЛАВНОЕ\nМЕНЮ");
+						languages.Add("Главное\nменю");
 						languages.Add("ходов за");
 						languages.Add("КУПИТЬ");
 						languages.Add("У каждого игрока есть возможность использовать кнопку легкий рестарт. При нажатии данной кнопки, уровень начнется заново, но с самого начала у игрока будут собраны все линии, кроме 2-х последних.");//50
 						languages.Add("Стоимость:");
 						languages.Add("ДОБАВИТЬ ХОДЫ");
-						languages.Add("ЛЕГКИЙ РЕСТАРТ");
-						languages.Add("КУПИТЬ ЗОЛОТО");
+						languages.Add("Легкий рестарт");
+						languages.Add("Купить золото");
 						languages.Add("ИМЯ ИГРОКА");
 						languages.Add("ХОДЫ");
-						languages.Add("СМЕНА\nАККАУНТА");
+						languages.Add("Смена\nаккаунта");
 						languages.Add("Проверьте ввод данных.\nВ одном из полей ошибка.");
 						languages.Add("Данный логин уже занят.");
 						languages.Add("Проверьте ввод данных.\nНе совпадают пароли или пустые поля ввода");//60
@@ -98,16 +98,16 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("ПОДТВЕРДИВ СМЕНУ АККАУНТА:\nВЫ ПОКИНЕТЕ УРОВЕНЬ\nИ ПЕРЕЙДЕТЕ НА СТРАНИЦУ\nВХОДА И РЕГИСТРАЦИИ");
 						languages.Add("ПОДТВЕРДИТЬ");
 						languages.Add("ОТМЕНА");
-						languages.Add("ВЫБОР\nУРОВНЯ");
+						languages.Add("Выбор\nуровня");
 						languages.Add("Дальше");
 						languages.Add("Начать\nобучение");//69
 						languages.Add("Добро пожаловать в нашу игру!");//70
-						languages.Add("Для того, чтобы\nразобраться с\nправилами игры,\nмы подготовили\nдля Вас короткое обучение.");
+						languages.Add("Для того, чтобы разобраться с правилами игры, мы подготовили для Вас короткое обучение.");
 						languages.Add("Главная цель игры");
-						languages.Add("собрать каждый\nцвет\nв вертикальную линию");
-						languages.Add("Игрок имеет возможность\nпередвигать цветные\nкубики по двум осям:\nпо вертикали и горизонтали");
-						languages.Add("У игрока есть\nвозможность перемещать\nпо вертикали каждый\nкубик по отдельности");
-						languages.Add("Но по горизонтали\nдвигается вся\nстрока целиком");
+						languages.Add("собрать каждый цвет в вертикальную линию");
+						languages.Add("Игрок имеет возможность передвигать цветные кубики по двум осям: по вертикали и горизонтали");
+						languages.Add("У игрока есть возможность перемещать по вертикали каждый кубик по отдельности");
+						languages.Add("Но по горизонтали двигается вся строка целиком");
 						languages.Add("Вверху игрового поля есть перемещаемая резервная ячейка, в которую можно временно переместить любой из цветных кубиков, находящихся на верхней горизонтали.");
 						languages.Add("Ходом считается перемещение цветного кубика из верхней резервной ячейки вниз на игровое поле.");
 						languages.Add("На прохождение уровня выделяется 10 ходов и неограниченное количество времени. Но чем меньше времени и ходов Вы потратите - тем выше будет Ваша позиция в рейтинге.");
@@ -125,28 +125,28 @@ public class settingsGame: MonoBehaviour {
 
 				if (PlayerPrefs.GetString ("languages") == "English")
 				{
-						languages.Add("CONTINUE\nGAME");
-						languages.Add("NEW\nGAME");
-						languages.Add("TRAINING\nROOM");
-						languages.Add("LEARNING");
-						languages.Add("LEADER\nBOARD");
-						languages.Add("SETTINGS");
-						languages.Add("EXIT");
-						languages.Add("RATE\nTHIS GAME");
-						languages.Add("SOUND:");
+						languages.Add("Continue\ngame");
+						languages.Add("New\ngame");
+						languages.Add("Training\nroom");
+						languages.Add("Learning");
+						languages.Add("Leader\nboard");
+						languages.Add("Settings");
+						languages.Add("Exit");
+						languages.Add("Rate\nthis game");
+						languages.Add("Sound:");
 						languages.Add("ON");
 						languages.Add("OFF");//10
-						languages.Add("BACK");
+						languages.Add("Back");
 						languages.Add("GOLD");//12
 						languages.Add("MOVES");//13
 						languages.Add("ADD");//14
 						languages.Add("LEVEL");//15
 						languages.Add("TIME");//16
-						languages.Add("EASY\nRESTART");
-						languages.Add("MENU");
-						languages.Add("BACK\nTO GAME");
+						languages.Add("Easy\nrestart");
+						languages.Add("Menu");
+						languages.Add("Back\nto game");
 						languages.Add("BUY\nGOLD");//20
-						languages.Add("EXIT\nTO MENU");
+						languages.Add("Exit\nto menu");
 						languages.Add("Currently you have:");
 						languages.Add("gold");
 						languages.Add("ADD:");
@@ -172,17 +172,17 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("Select an option");
 						languages.Add("Add moves");
 						languages.Add("Easy restart");
-						languages.Add("MAIN\nMENU");
+						languages.Add("Main\nmenu");
 						languages.Add("moves for");
 						languages.Add("BUY");
 						languages.Add("Each player has the opportunity to use the button   'EASY RESTART'. When this button is pressed, the level will restart. But the player has collected all lines from the beginning except the last 2.");//50
 						languages.Add("Cost:");
-						languages.Add("ADD MOVES");
-						languages.Add("EASY RESTART");
-						languages.Add("BUY GOLD");
+						languages.Add("Add moves");
+						languages.Add("Easy restart");
+						languages.Add("Buy gold");
 						languages.Add("PLAYER NAME");
 						languages.Add("MOVES");
-						languages.Add("CHANGE\nACCOUNT");
+						languages.Add("Change\naccount");
 						languages.Add("Check the input data.\nOne of the fields has error.");
 						languages.Add("This login is already in use.");
 						languages.Add("Check the input data.\nPassword does not match or an empty input field");//60
@@ -192,16 +192,16 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("IF YOY CONFIRM\nYOU LEAVE THE LEVEL\nAND GO TO THE LOGIN PAGE");
 						languages.Add("CONFIRM");
 						languages.Add("CANCEL");
-						languages.Add("SELECT\nLEVEL");
+						languages.Add("Select\nlevel");
 						languages.Add("Continue");
 						languages.Add("Start\nlearning");//69
 						languages.Add("Welcome to our game!");//70
-						languages.Add("In order to\nunderstand the rules\nof the game,\nwe have prepared\nfor You a short training."); //71
+						languages.Add("In order to understand the rules of the game, we have prepared for You a short training."); //71
 						languages.Add("The main goal of the game");//72
-						languages.Add("is collect every\ncolor\nin a vertical line");
+						languages.Add("is collect every color in a vertical line");
 						languages.Add("The player has the ability to move the colored cubes along two axes: vertically and horizontally");
-						languages.Add("The player\nhas the ability\nto move vertically each\ncube individually");
-						languages.Add("But the horizontal\nstring is moving\nentirely");
+						languages.Add("The player has the ability to move vertically each cube individually");
+						languages.Add("But the horizontal string is moving entirely");
 						languages.Add("At the top of the game board you can see movable reserve cell. You can temporarily move  to this cell any of the colored blocks, which located in the upper horizontally.");
 						languages.Add("The movement of colored cube from the top reserve cell down (on the playing field) is called 'MOVE'.");
 						languages.Add("You have 10 moves and unlimited time on any level. But you have a higher rank in rating, when you spend less time and moves.");
@@ -219,33 +219,33 @@ public class settingsGame: MonoBehaviour {
 
 				if (PlayerPrefs.GetString ("languages") == "Ukrainian")
 				{
-						languages.Add("ПРОДОВ-\nЖИТИ\nГРУ");//0
-						languages.Add("НОВА\nГРА");
-						languages.Add("ТРЕНУ-\nВАННЯ");
-						languages.Add("НАВЧАННЯ");
-						languages.Add("РЕЙТИНГ\nГРАВЦІВ");
-						languages.Add("НАЛАШТУ-\nВАННЯ");
-						languages.Add("ВИХІД");
-						languages.Add("ОЦІНИТИ\nГРУ");
-						languages.Add("ЗВУК:");
-						languages.Add("УВІМКНУТИ");
-						languages.Add("ВИМКНУТИ");//10
-						languages.Add("НАЗАД");//11
+						languages.Add("Продов-\nжити\nгру");//0
+						languages.Add("Нова\nгра");
+						languages.Add("Трену-\nвання");
+						languages.Add("Навчання");
+						languages.Add("Рейтинг\nгравців");
+						languages.Add("Налашту-\nвання");
+						languages.Add("Вихід");
+						languages.Add("Оцінити\nгру");
+						languages.Add("Звук:");
+						languages.Add("Увімкнути");
+						languages.Add("Вимкнути");//10
+						languages.Add("Назад");//11
 						languages.Add("ЗОЛОТО");
 						languages.Add("ХОДІВ");
 						languages.Add("ДОДАТИ");
 						languages.Add("РІВЕНЬ");
 						languages.Add("ЧАС");
-						languages.Add("ЛЕГКИЙ\nРЕСТАРТ");
-						languages.Add("МЕНЮ");
-						languages.Add("ПОВЕРНУТИСЯ\nДО ГРИ");//19
-						languages.Add("КУПИТИ\nЗОЛОТО");//20
-						languages.Add("ВИХІД ДО\nМЕНЮ");
+						languages.Add("Легкий\nрестарт");
+						languages.Add("Меню");
+						languages.Add("Повернутися\nдо гри");//19
+						languages.Add("Купити\nзолото");//20
+						languages.Add("Вихід до\nменю");
 						languages.Add("На даний час у Вас:");
 						languages.Add("золота");
-						languages.Add("ДОДАТИ ЩЕ:");
+						languages.Add("Додоти ще:");
 						languages.Add("золота за");
-						languages.Add("ПЕРЕЙТИ ДО СПЛАТИ");
+						languages.Add("Перейти до сплати");
 						languages.Add("Деякі функції гри вимагають акаунта на нашому сервісі\nі постійного доступу до інтернету");
 						languages.Add("Введіть свій логін:");
 						languages.Add("Введіть свій пароль:");
@@ -261,22 +261,22 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("ВАШІ ХОДИ");
 						languages.Add("На наступний рівень");//40
 						languages.Add("Повторити рівень");
-						languages.Add("НЕ ЗАЛИШИЛОСЬ ХОДІВ");
+						languages.Add("Не залишилось ходів");
 						languages.Add("Вибачте, але Ви витратили свої ходи.");
 						languages.Add("Виберіть один з варіантів");
 						languages.Add("Додати ходів");
 						languages.Add("Легкий рестарт");
-						languages.Add("ГОЛОВНЕ\nМЕНЮ");
+						languages.Add("Головне\nменю");
 						languages.Add("ходів за");
-						languages.Add("КУПИТИ");
+						languages.Add("купити");
 						languages.Add("У кожного гравця є можливість використовувати кнопку легкий рестарт. При натисканні даної кнопки, рівень почнеться заново, але з самого початку у гравця будуть зібрані всі лінії, крім 2-х останніх.");//50
 						languages.Add("Вартість:");
 						languages.Add("ДОДАТИ ХОДИ");
-						languages.Add("ЛЕГКИЙ РЕСТАРТ");
-						languages.Add("КУПИТИ ЗОЛОТО");
+						languages.Add("Легкий рестарт");
+						languages.Add("Купити золото");
 						languages.Add("ІМ'Я ГРАВЦЯ");
 						languages.Add("ХОДИ");
-						languages.Add("ЗМІНА\nАКАУНТУ");
+						languages.Add("Зміна\nаккаунту");
 						languages.Add("Перевірте введення даних.\nВ одному з полів помилка.");
 						languages.Add("Даний логін вже зайнятий.");
 						languages.Add("Перевірте введення даних.\nНе збігаються паролі або порожні поля введення");//60
@@ -286,16 +286,16 @@ public class settingsGame: MonoBehaviour {
 						languages.Add("ПІДТВЕРДИВШИ ЗМІНУ ЗАПИСУ:\nВИ ЗАЛИШИТЕ РІВЕНЬ\nІ ПЕРЕЙДЕТЕ НА СТОРІНКУ\nВХОДУ ТА РЕЄСТРАЦІЇ");
 						languages.Add("ПІДТВЕРДИТИ");
 						languages.Add("СКАСУВАТИ");
-						languages.Add("ВИБІР\nРІВНЯ");
+						languages.Add("Вибір\nрівня");
 						languages.Add("Далі");
 						languages.Add("Почати\nнавчання");//69
 						languages.Add("Ласкаво просимо в нашу гру!");//70
-						languages.Add("Для того, щоб\nрозібратися з\nправилами гри,\nми підготували\nдля Вас коротке навчання.");
+						languages.Add("Для того, щоб розібратися з правилами гри, ми підготували для Вас коротке навчання.");
 						languages.Add("Головна мета гри");
-						languages.Add("зібрати кожен\nколір\nу вертикальну лінію");
-						languages.Add("Гравець має можливість\nпересувати кольорові\nкубики по двох осях:\nпо вертикалі і горизонталі");
-						languages.Add("У гравця є\nможливість переміщати\nпо вертикалі кожен\nкубик окремо");
-						languages.Add("Але по горизонталі\nрухається весь\nрядок цілком");
+						languages.Add("зібрати кожен колір у вертикальну лінію");
+						languages.Add("Гравець має можливість пересувати кольорові кубики по двох осях: по вертикалі і горизонталі");
+						languages.Add("У гравця є можливість переміщати по вертикалі кожен кубик окремо");
+						languages.Add("Але по горизонталі рухається весь рядок цілком");
 						languages.Add("Вгорі ігрового поля є пересувна резервна клітинка, в яку можна тимчасово перемістити будь-який з кольорових кубиків, що знаходяться на верхній горизонталі.");
 						languages.Add("Ходом вважається переміщення кольорового кубика з верхньої резервної клітинки вниз на ігрове поле.");
 						languages.Add("На проходження рівня виділяється 10 ходів і необмежена кількість часу. Але чим менше часу і ходів Ви витратите, тим вище буде Ваша позиція в рейтингу.");

@@ -45,7 +45,7 @@ public class EasyRestart : MonoBehaviour {
 				gui2 = new List<float> (){ 300, 26, 600, 110 };
 				gui3 = new List<float> (){ 300, 110, 600, 50 };
 				gui4 = new List<float> (){ 200, 159, 400, 2 };
-				gui5 = new List<float> (){ 212, 162, 420, 260 };
+				gui5 = new List<float> (){ 200, 162, 400, 260 };
 				gui6 = new List<float> (){ 300, 415, 600, 50 };
 				gui7 = new List<float> (){ 272.5f, 460, 545, 58 };
 				gui8 = new List<float> (){ 272.5f, 200, 545, 58 };
@@ -182,9 +182,11 @@ public class EasyRestart : MonoBehaviour {
 				returnBase=Base64.Decode(dowload.text).Split(new char[] {'|'});
 
 
-				if(returnBase[0] =="connected" && returnBase[1] =="EasyRestart")
-
-						Application.LoadLevel(Application.loadedLevel);
+				if (returnBase [0] == "connected" && returnBase [1] == "EasyRestart") {
+						if (GUIGame.banner != null)
+								GUIGame.banner.Hide();
+						Application.LoadLevel (Application.loadedLevel);
+				}
 				PlayerPrefs.SetInt("lightRestart",1);
 
 		}

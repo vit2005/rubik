@@ -46,8 +46,8 @@ public class Menu : MonoBehaviour
 				menu=false;
 				freePlay=false;
 
-				fs_small = 19;
-				fs_big = 22;
+				fs_small = 20;
+				fs_big = 20;
 		}
 
 		void Update()

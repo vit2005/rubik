@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Generate;
 using GoogleMobileAds.Api;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(settingsGame))]
@@ -60,6 +61,8 @@ public class GUIGame : MonoBehaviour
 		public	 string 	  urlStat;
 
 		public int fontsize24 = 20;
+
+		public static BannerView banner;
 
 		public List<float> gold1 = new List<float> {20,20,140,30};
 		public List<float> gold2 = new List<float> {20,50,140,60};
@@ -176,12 +179,13 @@ public class GUIGame : MonoBehaviour
 
 				//win = true;
 
-				RequestBanner ();
+
 		}
 
-		public void Start()
 
+		public void Start()
 		{
+				RequestBanner ();
 				if (PlayerPrefs.GetString ("login") != "" && PlayerPrefs.GetString ("pass") != "") 
 				{
 						StartCoroutine (GoldInfo ());
@@ -312,6 +316,9 @@ public class GUIGame : MonoBehaviour
 				{
 						if (GUI.Button (new Rect (center - menu_btn[0], up - menu_btn[1], menu_btn[2], menu_btn[3]), settings.languages [18])&& acc==false) 
 						{
+								if (banner != null) 
+										banner.Hide ();
+								Debug.Log ("Hide");
 
 								addM        = false;
 								win         = false;
@@ -392,6 +399,8 @@ public class GUIGame : MonoBehaviour
 
 						if (GUI.Button (new Rect (center - menu_btn[0], up - menu_btn[1], menu_btn[2], menu_btn[3]), settings.languages [19])&& acc==false) 
 						{
+								if (banner != null)
+										banner.Show();
 								addG        = false;
 								addM        = false;
 								EasyRestart = false;
@@ -406,11 +415,17 @@ public class GUIGame : MonoBehaviour
 				if (win == true && s > 1 && menu == false && addG == false && addM == false && EasyRestart == false && PlayerPrefs.GetString("compani") == "true" ) 
 				{
 						int mg = System.Convert.ToInt32(Base64.Decode(moveGame));
+						if (banner!=null)
+								banner.Hide();
+						Debug.Log ("Hide");
 						wd.Wictory(mg,m,s);
 				}
 
 				if (move == 0 && menu == false && addG == false && addM == false && EasyRestart == false && PlayerPrefs.GetString("compani") == "true" ) 
 				{
+						if (banner!=null)
+								banner.Hide();
+						Debug.Log ("Hide");
 						wd.Defeat();
 				}
 
@@ -496,6 +511,9 @@ public class GUIGame : MonoBehaviour
 						if(menu==false && addM == false && addG == false && EasyRestart == false )
 						{
 								addG = true;
+								if (banner != null)
+										banner.Hide();
+								Debug.Log ("Hide");
 						}
 
 				}
@@ -505,6 +523,9 @@ public class GUIGame : MonoBehaviour
 						if(menu==false && addM == false && addG == false && EasyRestart == false )
 						{
 								addM = true;
+								if (banner != null)
+										banner.Hide();
+								Debug.Log ("Hide");
 						}
 				}
 
@@ -539,6 +560,9 @@ public class GUIGame : MonoBehaviour
 						if (GUI.Button (new Rect (restart[0], up - restart[1], restart[2], restart[3]), settings.languages [17])) 
 						{
 								EasyRestart = true;
+								if (banner != null)
+										banner.Hide();
+								Debug.Log ("Hide");
 						}
 
 				}
@@ -617,6 +641,7 @@ public class GUIGame : MonoBehaviour
 						{
 								acc  = false;
 						}
+					
 				}
 				else
 				{
@@ -634,6 +659,9 @@ public class GUIGame : MonoBehaviour
 						{
 								PlayerPrefs.SetString("login","");
 								PlayerPrefs.SetString("pass" ,"");
+								if (banner != null)
+										banner.Hide();
+								Debug.Log ("Hide");
 								Application.LoadLevel("log_In");
 						}
 
@@ -684,11 +712,17 @@ public class GUIGame : MonoBehaviour
 				{
 						if(menuExit==true)
 						{
+								if (banner != null)
+										banner.Hide();
+								Debug.Log ("Hide");
 								Application.LoadLevel("menu");
 						}
 						else
 						{
 								PlayerPrefs.SetInt("trainingLevel",Application.loadedLevel);
+								if (banner != null)
+										banner.Hide();
+								Debug.Log ("Hide");
 								Application.LoadLevel("training");
 						}
 				}
@@ -766,6 +800,11 @@ public class GUIGame : MonoBehaviour
 
 		private void RequestBanner()
 		{
+
+				if (banner != null) {
+						banner.Show ();
+						return;
+				}
 				#if UNITY_EDITOR
 				string adUnitId = "unused";
 				#elif UNITY_ANDROID
@@ -776,12 +815,13 @@ public class GUIGame : MonoBehaviour
 				string adUnitId = "unexpected_platform";
 				#endif
 
+
 				// Create a 320x50 banner at the top of the screen.
-				BannerView bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
+				banner = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
 				// Create an empty ad request.
 				AdRequest request = new AdRequest.Builder().Build();
 				// Load the banner with the request.
-				bannerView.LoadAd(request);
+				banner.LoadAd(request);
 		}
 
 }
